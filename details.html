@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Form</title>
+<link src="//netdna.bootstrapcdn.com/bootswatch/3.1.1/darkly/bootstrap.min.css">
+<style type="text/css">
+#status-buttons                 {  }
+#status-buttons a               { color:#FFF; display:inline-block; font-size:12px; margin-right:10px; text-align:center; text-transform:uppercase; }
+#status-buttons a:hover         { text-decoration:none; }
+#status-buttons span            { background:#080808; display:block; height:30px; margin:0 auto 10px; padding-top:5px; width:30px; 
+    border-radius:50%; }
+/* active buttons */
+#status-buttons a.active span   { background:#00BC8C; }
+}
+</style>
+</head>
+<body>
+
+<div class="col-sm-8 col-sm-offset-2">
+
+  <div id="form-container">
+  
+      <div class="page-header text-center">
+          <h2>Registration Form</h2>
+          
+          <div id="status-buttons" class="text-center">
+              <a ui-sref-active="active" ui-sref=".profile"> <span>1</span></a>
+              <a ui-sref-active="active" ui-sref=".submit"> <span>2</span></a>
+             
+          </div>
+      </div>
+      
+    
+      <form id="signup-form" ng-submit="addDetails()">
+          <!--  nested views  -->
+          <div id="form-views" ui-view></div>
+      </form>
+  
+  </div>
+  
+ 
+  <pre>
+    {{ detailsData }}
+  </pre>
+
+</div>
+</div>
+</body>
+</html>
